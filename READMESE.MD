@@ -1,6 +1,6 @@
 
 ### **README.md på Svensk**  
-```markdown
+
 # VippsIntegration
 
 VippsIntegration är en Ruby-gem som gör det enkelt att integrera Vipps i en Ruby on Rails-applikation.
@@ -54,6 +54,3 @@ puts response
 ## Licens
 
 VippsIntegration distribueras under MIT-licensen.
-```
-
----

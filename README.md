@@ -55,4 +55,3 @@ puts response
 VippsIntegration er distribuert under MIT-lisensen.
 ```
 
----
