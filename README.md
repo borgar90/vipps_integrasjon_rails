@@ -1,9 +1,5 @@
-Her er eksempler på dokumentasjon for README.md på norsk, svensk og engelsk:  
-
----
-
 ### **README.md på Norsk**  
-```markdown
+
 # VippsIntegration
 
 VippsIntegration er en Ruby-gem som gjør det enkelt å integrere Vipps i en Ruby on Rails-applikasjon.
