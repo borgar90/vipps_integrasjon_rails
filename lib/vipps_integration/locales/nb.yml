@@ -1,0 +1,3 @@
+nb:
+  vipps_integration:
+    transaction_text: "Betaling for bestilling #{order_id}"

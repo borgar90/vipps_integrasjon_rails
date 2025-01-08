@@ -1,0 +1,3 @@
+en:
+  vipps_integration:
+    transaction_text: "Payment for order #{order_id}"

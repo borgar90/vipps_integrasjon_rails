@@ -1,5 +1,7 @@
 require 'faraday'
 require 'json'
+require 'i18n'
+
 
 module VippsIntegration
   class Client
@@ -20,6 +22,12 @@ module VippsIntegration
 
     def create_payment(order_id:, amount:, callback_url:)
       token = request_token['access_token']
+      transaction_text = I18n.t(
+        'vipps_integration.transaction_text',
+        order_id: order_id,
+        default: "Payment for order #{order_id}"
+      )
+
       payload = {
         merchantInfo: {
           merchantSerialNumber: @merchant_id,
@@ -28,9 +36,10 @@ module VippsIntegration
         transaction: {
           orderId: order_id,
           amount: amount,
-          transactionText: "Payment for order #{order_id}"
+          transactionText: transaction_text
         }
       }
+
 
       response = Faraday.post("#{@base_url}/ecomm/v2/payments") do |req|
         req.headers['Authorization'] = "Bearer #{token}"

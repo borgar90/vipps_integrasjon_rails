@@ -50,6 +50,21 @@ response = client.create_payment(
 puts response
 ```
 
+## Tilpasning av språk (i18n)
+
+VippsIntegration støtter oversettelser gjennom Rails i18n. Standardtekst for transaksjoner kan oversettes ved å definere en nøkkel i dine egne oversettelsesfiler:
+
+```yaml
+nb:
+  vipps_integration:
+    transaction_text: "Betaling for bestilling #{order_id}"
+```
+   
+Du kan også endre standardspråket ved å sette I18n.default_locale i applikasjonen din:
+
+I18n.default_locale = :nb
+
+
 ## Lisens
 
 VippsIntegration er distribuert under MIT-lisensen.
