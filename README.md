@@ -53,5 +53,5 @@ puts response
 ## Lisens
 
 VippsIntegration er distribuert under MIT-lisensen.
-```
+
 
